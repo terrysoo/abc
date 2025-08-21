@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数独游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 游戏介绍页面 -->
+    <div id="intro-screen" class="screen active">
+        <div class="intro-container">
+            <h1>数独游戏</h1>
+            <div class="game-description">
+                <h2>游戏规则</h2>
+                <ul>
+                    <li>在9×9的网格中填入数字1-9</li>
+                    <li>每行、每列都不能有重复数字</li>
+                    <li>每个3×3的小方格内也不能有重复数字</li>
+                    <li>点击空格填入数字，完成后点击提交验证</li>
+                </ul>
+            </div>
+            <button id="start-btn" class="btn primary">开始游戏</button>
+        </div>
+    </div>
+
+    <!-- 游戏页面 -->
+    <div id="game-screen" class="screen">
+        <div class="game-container">
+            <div class="game-header">
+                <h2>数独挑战</h2>
+                <button id="back-btn" class="btn secondary">返回</button>
+            </div>
+            
+            <div class="sudoku-grid" id="sudoku-grid">
+                <!-- 9x9网格将通过JavaScript动态生成 -->
+            </div>
+            
+            <div class="game-controls">
+                <div class="number-pad">
+                    <button class="number-btn" data-number="1">1</button>
+                    <button class="number-btn" data-number="2">2</button>
+                    <button class="number-btn" data-number="3">3</button>
+                    <button class="number-btn" data-number="4">4</button>
+                    <button class="number-btn" data-number="5">5</button>
+                    <button class="number-btn" data-number="6">6</button>
+                    <button class="number-btn" data-number="7">7</button>
+                    <button class="number-btn" data-number="8">8</button>
+                    <button class="number-btn" data-number="9">9</button>
+                    <button class="number-btn clear-btn" data-number="0">清除</button>
+                </div>
+                <button id="submit-btn" class="btn primary">提交答案</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast提示框 -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <div class="toast-message" id="toast-message"></div>
+            <button id="toast-btn" class="btn primary">确定</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
